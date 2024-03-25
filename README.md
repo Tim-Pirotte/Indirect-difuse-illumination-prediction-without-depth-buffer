@@ -36,6 +36,14 @@ To get started with using the Indirect Diffuse Illumination Generator:
 
 - Tim Pirotte (@Tim-Pirotte)
 
+### Environment maps used in the dataset
+
+- Sergej Majboroda
+- Greg Zaal
+- Dimitrios Savva
+- Jarod Guest
+- Alexander Scholten
+
 ## License
 
 This project is licensed under this [LICENSE](LICENSE) file.
