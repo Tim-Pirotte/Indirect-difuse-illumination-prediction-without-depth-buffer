@@ -16,12 +16,11 @@ This project focuses on generating medium-quality (960px x 540px) indirect diffu
 
 ## How It Works
 
-The process involves training a machine learning model using pairs of direct illumination images and corresponding ground truth indirect illumination images. The trained model is then capable of generating indirect diffuse illumination based solely on direct illumination inputs.
+The process involves training a machine learning model using pairs of direct illumination images and corresponding ground truth indirect illumination images. The trained model is capable of generating indirect diffuse illumination based solely on direct illumination inputs.
 
 1. **Data Collection**: Gather pairs of direct and indirect illumination images generated in Blender with the generate_dataset script.
 2. **Model Training**: Train the machine learning model using the collected image pairs to learn the direct and indirect illumination mapping.
 3. **Inference**: Feed direct illumination images into the trained model to generate predicted indirect diffuse illumination.
-4. **Integration**: Incorporate the predicted indirect lighting into rendered scenes to enhance visual quality.
 
 ## Getting Started
 
@@ -29,9 +28,9 @@ To get started with using the Indirect Diffuse Illumination Generator:
 
 1. **Clone the Repository**: Clone this repository to your local machine using `git clone https://github.com/yourusername/indirect-diffuse-illumination.git`.
 2. **Install Dependencies**: Install the required dependencies by running `pip install -r requirements.txt`.
-3. **Train the Model**: Train the machine learning model using your dataset. Refer to the documentation for training instructions.
-4. **Generate Indirect Illumination**: Use the trained model to generate indirect diffuse illumination from direct illumination images.
-5. **Integrate with Blender**: Incorporate the generated indirect lighting into Blender scenes for enhanced realism.
+3. **Train the Model**: Train the machine learning model using your dataset.
+4. **Converting**: Convert the model using the 'PyTorch to Onnx' script and simplify the model using the 'onnx_to_onnx_simplified' script to enable faster inferencing. The latter will remove normalisation layers.
+5. **Generate Indirect Illumination**: Use the trained model to generate indirect diffuse illumination from direct illumination images using the inferencing script in the map 'onnx'.
 
 ## Contributors
 
