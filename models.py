@@ -1,5 +1,6 @@
 import torch
 from torch import nn
+from typing import Tuple
 
 
 class Block(nn.Module):
@@ -14,7 +15,7 @@ class Block(nn.Module):
     - use_dropout (bool): If True, applies dropout regularization. Defaults to False.
     """
   
-    def __init__(self, input_channels, output_channels, encoder=True, activation="relu", use_dropout=False):
+    def __init__(self, input_channels: int, output_channels: int, encoder: bool = True, activation: str = "relu", use_dropout: bool = False):
         super(Block, self).__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(input_channels, output_channels, 4, 2, 1, bias=False, padding_mode="reflect")
@@ -28,7 +29,7 @@ class Block(nn.Module):
         self.dropout = nn.Dropout(0.5)
         self.encoder = encoder
 
-    def forward(self, x):
+    def forward(self, x) -> torch.Tensor:
         """
         Defines the forward pass of the block.
 
@@ -124,7 +125,7 @@ class Generator(nn.Module):
             nn.Tanh(),  # Tanh for pixel values in the range [-1, 1]
         )
 
-    def forward(self, x):
+    def forward(self, x) -> torch.Tensor:
         """
         Defines the forward pass of the Generator network.
 
@@ -190,7 +191,7 @@ class CNN_block(nn.Module):
             nn.LeakyReLU(0.2)
         )
 
-    def forward(self, x):
+    def forward(self, x) -> torch.Tensor:
         """
         Defines the forward pass of the block.
 
@@ -213,7 +214,7 @@ class Discriminator(nn.Module):
     - features (list): List of feature sizes for different layers.
     """
   
-    def __init__(self, input_channels, features):
+    def __init__(self, input_channels: int, features: list):
         super(Discriminator, self).__init__()
         self.initial = nn.Sequential(
             nn.Conv2d(input_channels * 2, features[0], kernel_size=4, stride=4, padding=1, padding_mode="reflect"),
@@ -241,7 +242,7 @@ class Discriminator(nn.Module):
 
         self.model = nn.Sequential(*layers)
 
-    def forward(self, x, y):
+    def forward(self, x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:
         """
         Defines the forward pass of the Discriminator network.
 
