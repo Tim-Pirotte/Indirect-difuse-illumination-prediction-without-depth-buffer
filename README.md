@@ -6,7 +6,7 @@ This project aims to generate indirect diffuse illumination based on direct illu
 
 In computer graphics, indirect diffuse illumination is crucial in simulating realistic lighting conditions within a scene. While direct illumination accounts for light sources directly visible to surfaces, indirect illumination captures the light that bounces off surfaces and contributes to overall scene brightness.
 
-This project focuses on generating high-quality indirect diffuse illumination using machine learning models trained on images generated in Blender. By leveraging deep learning techniques, the generator network predicts the indirect lighting effects based on the input direct illumination images. It does this without using a depth buffer or normal buffer.
+This project focuses on generating medium-quality (960px x 540px) indirect diffuse illumination using machine-learning models trained on images generated in Blender. By leveraging deep learning techniques, the generator network predicts the indirect lighting effects based on the input direct illumination images. It does this without using a depth buffer or normal buffer.
 
 ## Key Features
 
