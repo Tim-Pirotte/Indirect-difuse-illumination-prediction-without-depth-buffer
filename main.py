@@ -128,7 +128,7 @@ if __name__ == '__main__':
     checkpoint_path = 'initial_model_checkpoint.pth'
     discriminator_checkpoint_path = 'initial_discriminator_model_checkpoint.pth'
 
-    pointers = get_image_pointers("C://Users//timpi//Documents//Dataset_no_ssr//")
+    pointers = get_image_pointers("path_to_dataset")
     print(f"Loaded {len(pointers)} image pointers")
 
     generator = Generator().to(device)
