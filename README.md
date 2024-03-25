@@ -26,7 +26,7 @@ The process involves training a machine learning model using pairs of direct ill
 
 To get started with using the Indirect Diffuse Illumination Generator:
 
-1. **Clone the Repository**: Clone this repository to your local machine using `git clone https://github.com/yourusername/indirect-diffuse-illumination.git`.
+1. **Clone the Repository**: Clone this repository to your local machine using `git clone https://github.com/Tim-Pirotte/Indirect-difuse-illumination-prediction-without-depth-buffer.git`.
 2. **Install Dependencies**: Install the required dependencies by running `pip install -r requirements.txt`.
 3. **Train the Model**: Train the machine learning model using your dataset.
 4. **Converting**: Convert the model using the 'PyTorch to Onnx' script and simplify the model using the 'onnx_to_onnx_simplified' script to enable faster inferencing. The latter will remove normalisation layers.
