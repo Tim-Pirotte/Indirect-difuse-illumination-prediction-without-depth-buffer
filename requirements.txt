@@ -1,7 +1,7 @@
 torch>=2.2.1
-torchvision>=0.10.0
-matplotlib>=3.4.3
-numpy>=1.21.2
-Pillow>=8.3.1
-onnxsim==1.8.0
-onnx==1.10.1
+torchvision>=0.17.1
+matplotlib>=3.8.3
+numpy>=1.26.4
+Pillow>=10.2.0
+onnxsim==0.4.36
+onnx==1.16.0
